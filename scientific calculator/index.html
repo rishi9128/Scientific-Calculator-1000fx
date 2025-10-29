@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scientific Calculator 1000fx</title>
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="display-container">
+            <div class="display-secondary" id="secondaryDisplay"></div>
+            <div class="display" id="display">0</div>
+            <div class="mode-indicator">
+                <span id="angleMode">DEG</span>
+                <span id="memoryIndicator"></span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="btn-function" onclick="shift()">
+                <span class="btn-secondary">ALPHA</span>
+                SHIFT
+            </button>
+            <button class="btn-function" onclick="changeMode()">MODE</button>
+            <button class="btn-clear" onclick="clearAll()">AC</button>
+            <button class="btn-clear" onclick="clearEntry()">DEL</button>
+            <button class="btn-operator" onclick="appendOperator('/')">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn-function" onclick="calculate('sin')">
+                <span class="btn-secondary">sin⁻¹</span>
+                sin
+            </button>
+            <button class="btn-function" onclick="calculate('cos')">
+                <span class="btn-secondary">cos⁻¹</span>
+                cos
+            </button>
+            <button class="btn-function" onclick="calculate('tan')">
+                <span class="btn-secondary">tan⁻¹</span>
+                tan
+            </button>
+            <button class="btn-function" onclick="calculate('log')">
+                <span class="btn-secondary">10ˣ</span>
+                log
+            </button>
+            <button class="btn-operator" onclick="appendOperator('*')">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn-function" onclick="calculate('sqrt')">
+                <span class="btn-secondary">x²</span>
+                √
+            </button>
+            <button class="btn-function" onclick="calculate('ln')">
+                <span class="btn-secondary">eˣ</span>
+                ln
+            </button>
+            <button class="btn-function" onclick="appendFunction('(')">
+                <span class="btn-secondary">)</span>
+                (
+            </button>
+            <button class="btn-function" onclick="appendFunction(')')">
+                <span class="btn-secondary">°'"</span>
+                )
+            </button>
+            <button class="btn-operator" onclick="appendOperator('-')">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn-special" onclick="memoryRecall()">
+                <span class="btn-secondary">M+</span>
+                MR
+            </button>
+            <button class="btn-operator" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn-special" onclick="memoryClear()">
+                <span class="btn-secondary">M-</span>
+                MC
+            </button>
+            <button class="btn-function" onclick="appendOperator('^')">
+                <span class="btn-secondary">ʸ√x</span>
+                xʸ
+            </button>
+
+            <!-- Row 6 -->
+            <button class="btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn-function" onclick="calculate('factorial')">
+                <span class="btn-secondary">nPr</span>
+                n!
+            </button>
+            <button class="btn-function" onclick="appendNumber('3.14159')">
+                <span class="btn-secondary">EXP</span>
+                π
+            </button>
+
+            <!-- Row 7 -->
+            <button class="btn-number" onclick="appendNumber('0')">0</button>
+            <button class="btn-number" onclick="appendNumber('.')">.</button>
+            <button class="btn-function" onclick="calculate('percent')">%</button>
+            <button class="btn-function" onclick="calculate('inverse')">
+                <span class="btn-secondary">Rnd</span>
+                1/x
+            </button>
+            <button class="btn-equals" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
