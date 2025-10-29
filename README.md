@@ -30,7 +30,3 @@ Inspired by the real Casio fx-1000 series, this calculator supports both basic a
 | **CSS3** | Styling, gradients, and layout |
 | **JavaScript (ES6)** | Functionality and event handling |
 
----
-
-## 📂 Folder Structure
-
